@@ -1,0 +1,60 @@
+use Academy;
+
+select Name, Financing, Id
+from Departments;
+
+select Name AS [Group Name],
+Rating AS [Group Rating]
+from Groups; 
+
+select Name, Salary + Premium AS [Total Salary]
+from Teachers;
+
+select 'The dean of faculty ' + Name + ' is ' + Dean
+from Faculties;
+
+select Surname
+from Teachers
+where IsProfessor = 1
+and Salary >= 1050;
+
+select Name
+from Departments
+where Financing < 11000 or Financing > 25000;
+
+select Name
+from Faculties
+where Name not like 'Computer Science';
+
+select Surname, Position
+from Teachers
+where IsProfessor = 0;
+
+select Surname, Position, Salary, Premium
+from Teachers
+where IsAssistant = 1 
+and Premium >= 160 and Premium <= 550;
+
+select Surname, Salary
+from Teachers
+where IsAssistant = 1;
+
+select Surname, Position
+from Teachers
+where EmploymentDate < '01.01.2000';
+
+select Name as [Name of Department]
+from Departments
+where Name between 'A' and 'Software Development';
+
+select Surname
+from Teachers
+where IsAssistant = 1 and Salary + Premium !< 1200;
+
+select Name
+from Groups
+where Year = 5 and Rating between '2' and '4';
+
+select Surname
+from Teachers
+where Salary < 550 and Premium < 200;
